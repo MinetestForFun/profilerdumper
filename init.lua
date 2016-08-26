@@ -1,4 +1,4 @@
-if minetest.chatcommands['profiler'] then
+if minetest.setting_getbool('profiler.load') then
   local function get_interval()
     return minetest.setting_get('profilerdumper.interval') or 10*60
   end
