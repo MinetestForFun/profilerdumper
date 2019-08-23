@@ -1,6 +1,6 @@
-if minetest.setting_getbool('profiler.load') then
+if minetest.settings:get_bool('profiler.load') then
   local function get_interval()
-    return minetest.setting_get('profilerdumper.interval') or 10*60
+    return minetest.settings:get('profilerdumper.interval') or 10*60
   end
   local function loop()
     minetest.chatcommands['profiler'].func(nil, 'dump')
